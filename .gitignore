@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+external_models/
+/robots/
+/01_box_ground/
+/02_render_observation/
+/03_urdf_humanoid/
+/04_pendulum_motor/
+/05_mini_humanoid_motor/
+/06_scene_env/
+/07_unitree_g1/
+.mujoco/
+MJDATA.TXT
+MJMODEL.TXT
+mjmodel.mjb
+mjmodel.xml
+screenshot.png
