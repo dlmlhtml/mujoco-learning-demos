@@ -61,6 +61,42 @@ source /opt/ros/humble/setup.bash
 python3 mujoco_node.py
 ```
 
+### `04_simple_arm_ik`
+
+Minimal Jacobian IK demo for a 3-DOF MuJoCo arm.
+
+It includes:
+
+- A target point in Cartesian space
+- End-effector position tracking through `site_xpos`
+- Jacobian-based IK updates
+- PD control that writes motor commands into `data.ctrl`
+
+Run:
+
+```powershell
+cd 04_simple_arm_ik
+python demo_simple_arm_ik.py
+```
+
+### `05_simple_arm_push`
+
+Minimal contact manipulation demo where a simple arm pushes a cube toward a goal.
+
+It includes:
+
+- A movable cube with `freejoint`
+- Contact detection through `data.ncon` and `data.contact`
+- Two-stage approach/push target logic
+- Reward and success calculation based on cube-goal distance
+
+Run:
+
+```powershell
+cd 05_simple_arm_push
+python demo_simple_arm_push.py
+```
+
 ## Setup
 
 ```powershell
