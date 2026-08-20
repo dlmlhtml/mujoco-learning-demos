@@ -97,6 +97,47 @@ cd 05_simple_arm_push
 python demo_simple_arm_push.py
 ```
 
+### `06_simple_arm_push_ppo`
+
+Gymnasium-style MuJoCo push environment with PPO training scripts.
+
+It includes:
+
+- `SimpleArmPushEnv` with `reset()`, `step(action)`, `render()`, reward, and success logic
+- Cartesian `delta xyz` action mapped through Jacobian IK and PD into MuJoCo `data.ctrl`
+- 24D observation with joint state, task geometry, push direction, and contact state
+- Stable-Baselines3 PPO training and playback scripts
+
+Run:
+
+```powershell
+cd 06_simple_arm_push_ppo
+pip install -r requirements-ppo.txt
+python train_ppo.py
+```
+
+### `07_imitation_push`
+
+Random-goal robot demonstrations and state-based Behavior Cloning.
+
+It includes:
+
+- A scripted expert verified on random target directions
+- Episode datasets with aligned state, RGB image, action, and next state
+- Episode-level train/validation splitting
+- A PyTorch MLP trained with supervised action regression
+- Closed-loop evaluation and interactive MuJoCo playback
+
+Run:
+
+```powershell
+cd 07_imitation_push
+python collect_expert_data.py --episodes 50
+python train_bc.py
+python evaluate_bc.py
+python play_bc_policy.py
+```
+
 ## Setup
 
 ```powershell

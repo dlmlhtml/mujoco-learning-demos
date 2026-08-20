@@ -9,3 +9,6 @@ MJMODEL.TXT
 mjmodel.mjb
 mjmodel.xml
 screenshot.png
+**/models/
+**/runs/
+**/dataset/
