@@ -22,10 +22,15 @@ observation -> neural network policy -> delta xyz -> Jacobian IK -> target_q -> 
 
 ## Install
 
+From the repository root, the recommended setup is:
+
 ```powershell
+conda env create -f environment.yml
 conda activate mujoco_learn
-pip install -r requirements-ppo.txt
+python verify_setup.py
 ```
+
+`requirements-ppo.txt` contains the same pinned Python packages for standalone use.
 
 ## Train
 

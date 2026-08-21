@@ -140,8 +140,15 @@ python play_bc_policy.py
 
 ## Setup
 
+Recommended reproducible setup for the native Python demos:
+
 ```powershell
-pip install -r requirements.txt
+conda env create -f environment.yml
+conda activate mujoco_learn
+python verify_setup.py
 ```
+
+See [SETUP.md](SETUP.md) for the pip alternative, tested versions, generated model/data
+instructions, GUI notes, and the separate ROS2 Humble setup.
 
 Large third-party model downloads and local experiment artifacts are intentionally excluded.

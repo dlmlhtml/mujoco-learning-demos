@@ -47,8 +47,17 @@ saved now so the same data structure can later be extended toward visual policie
 
 ## Run
 
+Create the shared environment from the repository root first:
+
 ```powershell
+conda env create -f environment.yml
 conda activate mujoco_learn
+python verify_setup.py
+```
+
+Then run the demo:
+
+```powershell
 cd C:\Users\Administrator\Desktop\robo\07_imitation_push
 python collect_expert_data.py --episodes 50
 python train_bc.py
@@ -63,4 +72,3 @@ python play_bc_policy.py
 - Train/validation splitting is done by episode, not by adjacent frames.
 - Low validation MSE does not guarantee closed-loop task success.
 - Closed-loop errors can compound because BC may visit states absent from the dataset.
-
